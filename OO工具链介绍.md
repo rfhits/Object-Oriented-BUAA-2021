@@ -16,7 +16,7 @@
 
 ## VS Code & Java
 
-见此[描述](https://github.com/rfhits/Java-Learning/blob/main/notes/000-%E7%94%A8vscode%E5%86%99Java.md)
+见此[教程](https://github.com/rfhits/Java-Learning/blob/main/notes/000-%E7%94%A8vscode%E5%86%99Java.md)
 
 ## Markdown
 

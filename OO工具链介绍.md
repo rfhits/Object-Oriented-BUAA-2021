@@ -18,6 +18,8 @@
 
 见此[教程](https://github.com/rfhits/Java-Learning/blob/main/notes/000-%E7%94%A8vscode%E5%86%99Java.md)
 
+格式化与风格检查见[此](https://zhuanlan.zhihu.com/p/352979403)。
+
 ## Markdown
 
 推荐使用的插件为`markdown all in one`

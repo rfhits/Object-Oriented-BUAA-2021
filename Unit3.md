@@ -63,10 +63,27 @@ msg本身的性质：
 
 ### Network
 
-`addMessage`：293行，特别对emojiMessage做了异常检查，要求加入的emojiMessage的id必须contains。也就是对应生活中，不能发送一个emojiId不存在的emoji
+#### addMessage()
 
-`sendMessage(int id)`：357行，添加对红包和emojiMessaeg的支持，人的钱要变化，
+第293行，特别对emojiMessage做了异常检查，要求加入的emojiMessage的id必须contains。也就是对应生活中，不能发送一个emojiId不存在的emoji。有一个坑就是要用emojiId作为exception的构造参数。
 
-`deleteColdEmoji(int limit)`：441行，
+#### sendMessage(int id)
 
-`sendIndirectMessage(int id)`：俩连通的人之间通信，返回值是最短路径的长度。考虑红包消息和Emoji消息的情况。
+357行，添加对**红包消息**和**emojiMessaeg**的支持，人的钱要变化或者emoji的heat要变。
+
+群发的红包消息很奇怪，把钱分成n份，组里的人均分。结果是发红包的人损失n-1份的钱，因为自己留了一份，可能是发了红包**自己马上抢了回来**😅。
+
+#### deleteColdEmoji(int limit)
+
+441行，给定limit，删除流行程度小的emoji和相应的emojiMessage。注意删除时最好用迭代器。
+
+#### sendIndirectMessage(int id)
+
+俩连通的人之间通信，返回值是最短路径的长度。考虑红包消息和Emoji消息的情况。
+
+1. 消息从list中消失
+2. 返回值是最短路径的长度
+3. 俩人的socialValue皆改变
+4. 若是红包消息，钱要变
+5. 若是emojiMessage，heat要变
+6. 接收者的消息list里要放入这个message

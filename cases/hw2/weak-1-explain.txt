@@ -1,0 +1,19 @@
+We expected "Ok, attribute count of class "C2" is 5." but we got "Ok, attribute count of class "C2" is 4." at line 4
+Your real output is listed as follows:
+Ok, operation count of class "C2" is 4.
+Ok, operation count of class "C1" is 4.
+Failed, duplicated class "Class1".
+Ok, attribute count of class "C2" is 4.
+Ok, attribute count of class "C1" is 4.
+Ok, associated classes of class "C2" are ().
+Ok, operation visibility of method "m1" in class "C2" is public: 0, protected: 0, private: 1, package-private: 0.
+Ok, operation visibility of method "m2" in class "C2" is public: 0, protected: 1, private: 0, package-private: 0.
+Ok, attribute "f2" in class "C2"'s visibility is protected.
+Ok, attribute "f3" in class "C2"'s visibility is public.
+Failed, duplicated class "Class1".
+Ok, associated classes of class "C1" are ().
+Ok, operation visibility of method "m1" in class "C2" is public: 0, protected: 0, private: 1, package-private: 0.
+Ok, operation visibility of method "m2" in class "C2" is public: 0, protected: 1, private: 0, package-private: 0.
+Ok, operation visibility of method "m2" in class "C1" is public: 0, protected: 1, private: 0, package-private: 0.
+Failed, duplicated attribute "f2" in class "C1".
+Failed, duplicated class "Class1".

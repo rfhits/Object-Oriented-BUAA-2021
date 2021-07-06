@@ -10,43 +10,60 @@
 
 这悲惨的遭遇，不禁想起做Unit3时，我竟然花了30分钟研究怎么导包。
 
-UmlElement里，什么是Operation，什么是Parameter？我一脸蒙蔽。
+本文的目的在于记录与帮助，内容参考了此[博客](https://www.cnblogs.com/puzzledAtticus/p/11076553.html)。
 
-为什么叫Operation不叫Method，，你，，你可以强迫我用Operation这个单词，但是课程组你得给我个理由知道吧。
-
-到了下午，慢慢看，不得不说，这OO有OS内味了，感觉自己在解谜啊。
+打包的方法见[此博客](https://www.cnblogs.com/binbingg/p/13601702.html)。
 
 ## 写在前面
 
 如果对UML一窍不通，那这个单元可以直接结课了。
 
-[UML快速入门](https://blog.csdn.net/endlessseaofcrow/article/details/85855461)。
+首先，我们要知道`models/elements`下，那些.java文件是什么，哪些有用，哪些没用。
 
-https://www.cnblogs.com/wolf-sun/p/UML-Sequence-diagram.html
+<img src="img/Unit4-elements.jpg" style="zoom:50%;" />
 
-特别注意官方包models/elements下的那些问价，就是UML类图的“组件”。
+其次，我们要知道，这些`element`中，它的成员变量的作用是什么。
 
-想要弄懂那些英文单词，可以看[这个](https://javapapers.com/oops/association-aggregation-composition-abstraction-generalization-realization-dependency/)。
+最后，我们要对输入的`elements[]`进行组织，使之满足课程的要求。
 
-本文章参考此[博客](https://www.cnblogs.com/puzzledAtticus/p/11076553.html)。
+[UML类图快速入门](https://blog.csdn.net/endlessseaofcrow/article/details/85855461)。
+
+[官方推荐的UML入门](https://www.cnblogs.com/wolf-sun/p/UML-Sequence-diagram.html)
+
+`models/elements`下那些英文单词是什么意思，可以看[这篇文章](https://javapapers.com/oops/association-aggregation-composition-abstraction-generalization-realization-dependency/)。
 
 ## 要干什么
 
-难点在于，我们不知道这些Element具体是干什么的，以及各个ELement里面的成员变量是做什么的，这些类具体有哪些方法。
+首先要知道，`models/elements`下的很多类，都继承了`UmlElement`。
+
+我们要做的是，
+
+1. 输入`UmlElement[]`，为它们建立起联系。具体地说，要将它们封装成相应的类，或是存储到对应的容器，组织起来；
+2. 实现查询的接口。根据上一步自己的封装和各种容器，给出查询的答案。
 
 ### hw1
 
-输入特定格式的UmlElement，将其存储到对应的容器，并构建关系。
+要求是，输入类图的elements，实现查询的接口。
 
-实现查询时的接口。
+#### 架构
 
-特点：`add by id, query by name`
+千万不要把类都写到一起，否则这个Unit的代码行数绝对爆炸，代码风格最好就50分。
+
+我推荐大家参考一位学长的代码，架构看起来非常牛逼，反正我挺后悔把代码写成一坨的。
+
+学长代码见此：[BUAA_Object_Oriented_2019-sinoyou](https://github.com/sinoyou/BUAA_Object_Oriented_2019/tree/project-4-branch-2)
+
+不要抄袭。
+
+#### 难点
+
+我们的作业有个特点——`add by id, query by name`
 
 id保证不重复（言外之意，name保证存在重复）。
 
-还有一个我个人认为非常恶心的地方，
+还有一个我认为非常恶心的地方，
 
-在加入，或者说初始化这些元素的时候，就应该做Exceptions的check，不合法的东西就不应该被添加进来，而不是放到query的时候再来做。
+在加入这些元素的时候，就应该做异常的检查。尤其是属性的类型，不合法的东西就不应该被添加进来，而不是放到query的时候再来做。
 
 指导书有些地方写的不清楚是肯定的，比如说异常的抛出，不过如果按照我们的思路，函数式编程地来写指导书，那就把思路都告诉我们了，难度就下去。
 
@@ -58,13 +75,15 @@ id保证不重复（言外之意，name保证存在重复）。
 
 可能输入多个State Machine Diagram
 
-## Class Diagram
+### hw3
 
-这玩意最好自底向上看。
+collaboration这个element没有输进来，但是会有几个element索引到它。
+
+## Class Diagram
 
 ### UmlParameter
 
-参数
+表示类图中，方法（Method）的参数。
 
 ```java
 private UmlParameter(AbstractElementData elementData, Direction direction, NameableType type) {
@@ -74,7 +93,8 @@ private UmlParameter(AbstractElementData elementData, Direction direction, Namea
 }
 ```
 
-尤其要注意type
+* `direction`表示这个参数是输入还是返回
+* `type`表示返回的类型
 
 ### UmlOperation
 
@@ -85,11 +105,11 @@ private UmlOperation(AbstractElementData elementData, Visibility visibility) {
 }
 ```
 
-需要我们封装，能够区分这个Operation有无返回值，有无接收参数，这些参数是什么。
+需要我们封装，能够区分这个`Operation`有无返回值，有无接收参数，这些参数是什么。
 
 最好封装下接收的参数、返回的参数，因为要统计操作的参数类型。
 
-### UmlAttributes
+### UmlAttribute
 
 ```java
 private UmlAttribute(AbstractElementData elementData, Visibility visibility, NameableType type) {
@@ -99,7 +119,7 @@ private UmlAttribute(AbstractElementData elementData, Visibility visibility, Nam
 }
 ```
 
-parentId表示是哪个类的attrib
+* `parentId`表示是哪个类的`attribute`
 
 ### UmlClass
 
@@ -110,9 +130,9 @@ private UmlClass(AbstractElementData elementData, Visibility visibility) {
 }
 ```
 
-需要封装。
+需要封装，我的方法是，将其封装成`MyClass`，表示一张类图。
 
-把attribute和operation放好。
+利用各种容器，存储类图中的attribute和operation。
 
 ### UmlAssociationEnd
 
@@ -126,7 +146,7 @@ private UmlAssociationEnd(AbstractElementData elementData, Visibility visibility
 }
 ```
 
-只是一种链接到了某个UMLClass的结构。
+* `reference`链接一个UmlClass。
 
 ### UmlAssociation
 
@@ -138,13 +158,13 @@ private UmlAssociationEnd(AbstractElementData elementData, Visibility visibility
 >   + end1：对应其中一个UMLAssociationEnd的Id
 >   + end2：对应另外一个UMLAssociationEnd的Id
 
-然后我们要通过Id获取到这两个UMLAssociationEnd，再通过End的getRef得到ClassId。
+我们要通过Id获取到这两个UMLAssociationEnd，再通过End的getRef得到ClassId。
 
 ### UmlInterface
 
 注意接口与接口之间的继承关系。
 
-可以为接口维护自己的父接口，这样查询一个类对应所有父接口时可以快。
+可以为接口维护自己的父接口，这样查询一个类对应所有父接口时可以快一点。
 
 ### UmlInterfaceRealization
 
@@ -156,7 +176,7 @@ private UmlInterfaceRealization(AbstractElementData elementData, String source, 
 }
 ```
 
-* **_parent**：同成员变量source
+* `parentId`：同成员变量source
 * source：对应实现该接口的类的ID
 * target：对应该接口的ID
 
@@ -178,7 +198,6 @@ private UmlInterfaceRealization(AbstractElementData elementData, String source, 
   * 确保每个State Machine中，从某个状态到另一个状态的直接迁移均具有不同的Event或Guard，即从某个状态到另一个状态的直接迁移若有多个，则这些迁移一定互不相同；
   * 确保每个State Machine中，Initial State没有状态迁入，Final State没有状态迁出；
   * 确保每个State Machine中不包含复合状态。
-* *
 
 ### UmlStateMachine
 
@@ -188,70 +207,54 @@ private UmlInterfaceRealization(AbstractElementData elementData, String source, 
 
 链接到一个状态机
 
-
 ### UmlState
 
 * `_parent`链接到一个`UmlRegion`
 
-### UmlFinalState
-
 ### UmlEvent
 
-一个事件
+一个事件，作为Transition的trigger
 
 * `_parent`链接到一个`UmlTransition`
-*
 
 ### UmlTransition
 
 * `_parent`链接到一个`UmlRegion`
-*
 
 ### UmlRegion
 
 * `_parent` 链接到一个`UmlStateMachine`
-*
 
 ## Sequence Diagram
 
 顺序图相关确保每个顺序图中，Lifeline和其Represent均一一对应。
 
+collaboration 不输入
+
 ### UmlInteraction
 
-抽象地表示了**整个顺序图**
+抽象地表示了**顺序图**
+
+* `parentId`链接到一个collaboration
+
+### UmlAttribute
+
+* `parentId`链接到一个collaboration
+
 
 ### UmlLifeLine
 
 就是顺序图的参与对象
 
+* `parentId`链接到一个`UmlInteraction`
+* `represent`链接到一个`UmlAttribute`
+
 ### UmlMessage
 
-* `parent`链接到一个UmlInteraction
+* `parent`链接到一个`UmlInteraction`
 * `targetId`链接到接收消息的对象
 * `sourceId`哪个lifeline发的
 * `messageSort`，表示消息的类型，同步的，还是reply
-
-## 封装
-
-### MyClass
-
-封装类
-
-### MyOperation
-
-封装方法，内含attribute
-
-### MyInteraction
-
-封装整个顺序图（Sequence Diagram）
-
-内含LifeLine，Message。
-
-### MyStateMachine
-
-封装整个状态图，
-
-内含State，Transition
 
 ## 指令
 
@@ -263,7 +266,7 @@ UmlAttribute和UmlParameter都有一个成员变量
 private final NameableType type;
 ````
 
-getType()后判断instance即可
+`getType()`后判断instance即可
 
 ```java
 String type = null;
@@ -346,35 +349,46 @@ MyOperation内部无法生成Info，必须放出权限让Inter生成。即包含
 
 ### 发送的对应类型消息的个数
 
+## R00X
 
-## bug
-
-### hw1
+### R001
 
 
-### hw2
+### R002
 
-#### 1
+找到循环继承的类或接口，输出之。
 
-```java
-for {
-    for (element ) {
-        sort
-        setUp()
-    }
-}
-```
+类比较简单。
 
-setUp应该在for之后
+对于每一个类，为其建立一个chain，就是一条parentPath，dfs它，
 
-#### 2
+dfs时，遍历generalization，有sourceId就加到parentPath里，如果在parentPath里又找到了自己，说明parentPath中存在circle，把circle取下放到返回值里。
 
-统计数量，容器用错
+### R003
 
-```
-if (seqName2MySeq.containsKey(interName)) {
-            mySeqName2Num.put(interName, mySeqName2Num.get(interName) + 1);
-        } else {
-            mySeqName2Num.put(interName, 1);
-        }
-```
+接口不能重复继承同一个接口。
+
+因为输入数据保证类的单继承，所以类不会出现重复继承。若类的继承链中有环，则R002会被触发，R003不做检查，直接异常。
+
+接口的的继承应该是一颗多叉树。
+
+接口的两个父亲的父接口集应该是无交集的。
+
+每个接口通过Generalization更新自己的父接口集时，应该是对原有的扩充，不应出现重复。
+
+### R004
+
+类不能重复实现接口。包括类的继承，接口的继承。
+
+每个类的继承，都应该是一颗多叉树。
+
+### R005
+
+> 目前类图已有的元素中，除`direction`为`return` 的`UMLParameter`、`UMLGeneralization`、`UMLAssociation`、`UMLInterfaceRealization`、`UMLAssociationEnd`以外，其余元素的`name`字段均不能为空。
+
+在做element的加入时，对类图中除了`UmlAttribute`元素做一个pre check，具体来说，有
+
+`UmlParameter`, `UmlOperation`, `UmlClass`, `UmlInterface`,
+
+然后遍历用`ClassInteraction`中的`attribute`来做最后的抉择。
+

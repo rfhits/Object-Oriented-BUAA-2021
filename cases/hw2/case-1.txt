@@ -1,0 +1,61 @@
+{"_parent":"AAAAAAFF+qBWK6M3Z8Y=","visibility":"public","name":"Car","_type":"UMLClass","_id":"AAAAAAF1SewAftFQQak="}
+{"_parent":"AAAAAAF1SewAftFQQak=","visibility":"public","name":"fuel","_type":"UMLOperation","_id":"AAAAAAF1Se7ei9PquT8="}
+{"_parent":"AAAAAAF1Se7ei9PquT8=","name":"fuel","_type":"UMLParameter","_id":"AAAAAAF1SfJIPdWQRq8=","type":"int","direction":"in"}
+{"_parent":"AAAAAAF1SewAftFQQak=","visibility":"public","name":"move","_type":"UMLOperation","_id":"AAAAAAF1SfM6ddXMG2g="}
+{"_parent":"AAAAAAF1SfM6ddXMG2g=","name":"time","_type":"UMLParameter","_id":"AAAAAAF1SfOEh9X3v2I=","type":"int","direction":"in"}
+{"_parent":"AAAAAAF1SfM6ddXMG2g=","name":null,"_type":"UMLParameter","_id":"AAAAAAF1SfON4NYM4oc=","type":"int","direction":"return"}
+{"_parent":"AAAAAAF1SewAftFQQak=","name":null,"_type":"UMLGeneralization","_id":"AAAAAAF1SffVQdb4hBU=","source":"AAAAAAF1SewAftFQQak=","target":"AAAAAAF1SeyladJGxdo="}
+{"_parent":"AAAAAAF1SewAftFQQak=","visibility":"private","name":"tyre","_type":"UMLAttribute","_id":"AAAAAAF1SexBsdHNh3w=","type":"int"}
+{"_parent":"AAAAAAF1SewAftFQQak=","visibility":"private","name":"fuel","_type":"UMLAttribute","_id":"AAAAAAF1SfGLCdUvWp0=","type":"int"}
+{"_parent":"AAAAAAFF+qBWK6M3Z8Y=","visibility":"public","name":"Ship","_type":"UMLClass","_id":"AAAAAAF1Sewew9F5cgg="}
+{"_parent":"AAAAAAF1Sewew9F5cgg=","visibility":"public","name":"move","_type":"UMLOperation","_id":"AAAAAAF1SexK+dHTlvM="}
+{"_parent":"AAAAAAF1SexK+dHTlvM=","name":"time","_type":"UMLParameter","_id":"AAAAAAF1SfTvZdbYdII=","type":"int","direction":"in"}
+{"_parent":"AAAAAAF1SexK+dHTlvM=","name":null,"_type":"UMLParameter","_id":"AAAAAAF1SfTvZdbZrDA=","type":"int","direction":"return"}
+{"_parent":"AAAAAAF1Sewew9F5cgg=","name":null,"_type":"UMLGeneralization","_id":"AAAAAAF1Sff5gNcagM4=","source":"AAAAAAF1Sewew9F5cgg=","target":"AAAAAAF1SeyladJGxdo="}
+{"_parent":"AAAAAAF1Sewew9F5cgg=","visibility":"private","name":"displacement","_type":"UMLAttribute","_id":"AAAAAAF1Sfbpj9buL6I=","type":"int"}
+{"_parent":"AAAAAAFF+qBWK6M3Z8Y=","visibility":"public","name":"Plane","_type":"UMLClass","_id":"AAAAAAF1Sewp6NGiMyM="}
+{"_parent":"AAAAAAF1Sewp6NGiMyM=","visibility":"public","name":"move","_type":"UMLOperation","_id":"AAAAAAF1SfVZqtbiHFQ="}
+{"_parent":"AAAAAAF1SfVZqtbiHFQ=","name":"time","_type":"UMLParameter","_id":"AAAAAAF1SfWNg9bpIpU=","type":"int","direction":"in"}
+{"_parent":"AAAAAAF1SfVZqtbiHFQ=","name":null,"_type":"UMLParameter","_id":"AAAAAAF1SfWNg9bqOqs=","type":"int","direction":"return"}
+{"_parent":"AAAAAAF1Sewp6NGiMyM=","name":null,"_type":"UMLGeneralization","_id":"AAAAAAF1SffpotcJ0Aw=","source":"AAAAAAF1Sewp6NGiMyM=","target":"AAAAAAF1SeyladJGxdo="}
+{"_parent":"AAAAAAFF+qBWK6M3Z8Y=","visibility":"public","name":"Vehicle","_type":"UMLClass","_id":"AAAAAAF1SeyladJGxdo="}
+{"_parent":"AAAAAAF1SeyladJGxdo=","visibility":"public","name":"move","_type":"UMLOperation","_id":"AAAAAAF1Se3ka9Nkpwc="}
+{"_parent":"AAAAAAF1Se3ka9Nkpwc=","name":"time","_type":"UMLParameter","_id":"AAAAAAF1SfAStdRtnh8=","type":"int","direction":"in"}
+{"_parent":"AAAAAAF1Se3ka9Nkpwc=","name":null,"_type":"UMLParameter","_id":"AAAAAAF1SfDxv9S94zk=","type":"int","direction":"return"}
+{"_parent":"AAAAAAF1SeyladJGxdo=","name":null,"_type":"UMLAssociation","end2":"AAAAAAF1Sgmletih6WY=","end1":"AAAAAAF1SgmletigGMU=","_id":"AAAAAAF1SgmletifmSI="}
+{"reference":"AAAAAAF1SfuXJ9dbf2k=","multiplicity":"","_parent":"AAAAAAF1SgmletifmSI=","visibility":"public","name":null,"_type":"UMLAssociationEnd","aggregation":"none","_id":"AAAAAAF1Sgmletih6WY="}
+{"reference":"AAAAAAF1SeyladJGxdo=","multiplicity":"","_parent":"AAAAAAF1SgmletifmSI=","visibility":"public","name":null,"_type":"UMLAssociationEnd","aggregation":"none","_id":"AAAAAAF1SgmletigGMU="}
+{"_parent":"AAAAAAF1SeyladJGxdo=","visibility":"private","name":"speed","_type":"UMLAttribute","_id":"AAAAAAF1Se8ZiNQacR4=","type":"int"}
+{"_parent":"AAAAAAFF+qBWK6M3Z8Y=","visibility":"public","name":"Customer","_type":"UMLClass","_id":"AAAAAAF1SfuXJ9dbf2k="}
+{"_parent":"AAAAAAF1SfuXJ9dbf2k=","visibility":"public","name":"order","_type":"UMLOperation","_id":"AAAAAAF1Sf0J69ebxDg="}
+{"_parent":"AAAAAAF1Sf0J69ebxDg=","name":"from","_type":"UMLParameter","_id":"AAAAAAF1Sf1R6Nei26k=","type":"int","direction":"in"}
+{"_parent":"AAAAAAF1Sf0J69ebxDg=","name":"to","_type":"UMLParameter","_id":"AAAAAAF1Sf2yldelIqc=","type":"int","direction":"in"}
+{"_parent":"AAAAAAF1SfuXJ9dbf2k=","name":null,"_type":"UMLAssociation","end2":"AAAAAAF1SgmC39gGGEo=","end1":"AAAAAAF1SgmC39gFR7s=","_id":"AAAAAAF1SgmC39gEcNc="}
+{"reference":"AAAAAAF1SgUupNewiIs=","multiplicity":"","_parent":"AAAAAAF1SgmC39gEcNc=","visibility":"public","name":null,"_type":"UMLAssociationEnd","aggregation":"none","_id":"AAAAAAF1SgmC39gGGEo="}
+{"reference":"AAAAAAF1SfuXJ9dbf2k=","multiplicity":"","_parent":"AAAAAAF1SgmC39gEcNc=","visibility":"public","name":null,"_type":"UMLAssociationEnd","aggregation":"none","_id":"AAAAAAF1SgmC39gFR7s="}
+{"_parent":"AAAAAAFF+qBWK6M3Z8Y=","visibility":"public","name":"Platform","_type":"UMLClass","_id":"AAAAAAF1SgUupNewiIs="}
+{"_parent":"AAAAAAF1SgUupNewiIs=","visibility":"public","name":"handle","_type":"UMLOperation","_id":"AAAAAAF1SgbuaNfllts="}
+{"_parent":"AAAAAAF1SgbuaNfllts=","name":"from","_type":"UMLParameter","_id":"AAAAAAF1Sge6PtfsbRU=","type":"int","direction":"in"}
+{"_parent":"AAAAAAF1SgbuaNfllts=","name":"to","_type":"UMLParameter","_id":"AAAAAAF1Sge6P9ftHNE=","type":"int","direction":"in"}
+{"_parent":"AAAAAAF1SgbuaNfllts=","name":null,"_type":"UMLParameter","_id":"AAAAAAF1Sge6P9fuZwg=","type":{"$ref":"AAAAAAF1SeyladJGxdo="},"direction":"return"}
+{"_parent":"AAAAAAF1SgUupNewiIs=","name":null,"_type":"UMLAssociation","end2":"AAAAAAF1SgmZrNhPleA=","end1":"AAAAAAF1SgmZrNhO9XU=","_id":"AAAAAAF1SgmZq9hNwmU="}
+{"reference":"AAAAAAF1SeyladJGxdo=","multiplicity":"","_parent":"AAAAAAF1SgmZq9hNwmU=","visibility":"public","name":null,"_type":"UMLAssociationEnd","aggregation":"none","_id":"AAAAAAF1SgmZrNhPleA="}
+{"reference":"AAAAAAF1SgUupNewiIs=","multiplicity":"","_parent":"AAAAAAF1SgmZq9hNwmU=","visibility":"public","name":null,"_type":"UMLAssociationEnd","aggregation":"none","_id":"AAAAAAF1SgmZrNhO9XU="}
+{"_parent":"AAAAAAF1SfhhWdcrp2I=","visibility":"public","name":"Interaction1","_type":"UMLInteraction","_id":"AAAAAAF1SfhhWdcs5+o="}
+{"messageSort":"synchCall","_parent":"AAAAAAF1SfhhWdcs5+o=","visibility":"public","name":"handle","_type":"UMLMessage","_id":"AAAAAAF1SgyU59xUhN8=","source":"AAAAAAF1SgvKtdwNVp4=","target":"AAAAAAF1SgwAl9wuDMI="}
+{"messageSort":"createMessage","_parent":"AAAAAAF1SfhhWdcs5+o=","visibility":"public","name":"create","_type":"UMLMessage","_id":"AAAAAAF1Sg2Dndxsrho=","source":"AAAAAAF1SgwAl9wuDMI=","target":"AAAAAAF1Sfh0BNc7F4A="}
+{"messageSort":"reply","_parent":"AAAAAAF1SfhhWdcs5+o=","visibility":"public","name":"returnVehicle","_type":"UMLMessage","_id":"AAAAAAF1Sg9L19ylGCg=","source":"AAAAAAF1SgwAl9wuDMI=","target":"AAAAAAF1SgvKtdwNVp4="}
+{"messageSort":"synchCall","_parent":"AAAAAAF1SfhhWdcs5+o=","visibility":"public","name":"run","_type":"UMLMessage","_id":"AAAAAAF1Sg\/PTdy7EaU=","source":"AAAAAAF1SgvKtdwNVp4=","target":"AAAAAAF1Sfh0BNc7F4A="}
+{"messageSort":"reply","_parent":"AAAAAAF1SfhhWdcs5+o=","visibility":"public","name":"distance","_type":"UMLMessage","_id":"AAAAAAF1ShAR+9zRjZ0=","source":"AAAAAAF1Sfh0BNc7F4A=","target":"AAAAAAF1SgvKtdwNVp4="}
+{"_parent":"AAAAAAF1SfhhWdcs5+o=","visibility":"public","name":"car","_type":"UMLLifeline","isMultiInstance":false,"_id":"AAAAAAF1Sfh0BNc7F4A=","represent":"AAAAAAF1Sfh0BNc6x94="}
+{"_parent":"AAAAAAF1SfhhWdcs5+o=","visibility":"public","name":"customer","_type":"UMLLifeline","isMultiInstance":false,"_id":"AAAAAAF1SgvKtdwNVp4=","represent":"AAAAAAF1SgvKtdwMsZs="}
+{"_parent":"AAAAAAF1SfhhWdcs5+o=","visibility":"public","name":"platform","_type":"UMLLifeline","isMultiInstance":false,"_id":"AAAAAAF1SgwAl9wuDMI=","represent":"AAAAAAF1SgwAl9wtEmA="}
+END_OF_MODEL
+INCOMING_MSG_COUNT Interaction1 customer
+PTCP_OBJ_COUNT Interaction1
+SENT_MESSAGE_COUNT Interaction1 customer SYNCH_CALL
+
+
+Ok, incoming message count of lifeline "customer" in umlinteraction "Interaction1" is 2.
+Ok, participant count of umlinteraction "Interaction1" is 3.
+Ok, sent message count of lifeline "customer" of umlinteraction "Interaction1" is 2.

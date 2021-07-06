@@ -1,0 +1,20 @@
+Total class count is 4.
+Ok, operation count of class "B" is 4.
+Ok, attribute count of class "A" is 2.
+Ok, attribute count of class "B" is 3.
+Ok, attribute count of class "C" is 4.
+Ok, operation visibility of method "getId" in class "A" is public: 2, protected: 0, private: 0, package-private: 0.
+Ok, operation visibility of method "getId" in class "C" is public: 1, protected: 0, private: 0, package-private: 0.
+Ok, attribute "id1" in class "A"'s visibility is private.
+Failed, duplicated attribute "id1" in class "C".
+Ok, the type of attribute "id1" in class "A" is Class.
+Ok, the type of attribute "id1" in class "B" is Class.
+Failed, duplicated attribute "id1" in class "C".
+Failed, attribute "name" not found in class "A".
+Ok, the type of attribute "name" in class "B" is inter.
+Ok, method "getId" in class "A" has parameter tables and return value: (return: Class), (int, return: Class).
+Ok, method "getId" in class "C" has parameter tables and return value: (return: Class).
+Failed, wrong type of parameters or return value in method "getName" of class "B".
+Ok, method "setName" in class "B" has parameter tables and return value: (return: void).
+Ok, method "setId" in class "B" has parameter tables and return value: (, no return).
+Ok, method "getName" in class "C" has parameter tables and return value: (return: inter).

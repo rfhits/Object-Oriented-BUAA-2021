@@ -1,0 +1,28 @@
+{"_parent":"AAAAAAFF+h6SjaM2Hec=","name":"Parser","_type":"UMLStateMachine","_id":"AAAAAAFrXjtGRjOR9DA="}
+{"_parent":"AAAAAAFrXjtGRjOR9DA=","visibility":"public","name":null,"_type":"UMLRegion","_id":"AAAAAAFrXjtGRjOS988="}
+{"_parent":"AAAAAAFrXjtGRjOS988=","visibility":"public","name":null,"_type":"UMLPseudostate","_id":"AAAAAAFrXjtjdjOYbaE="}
+{"_parent":"AAAAAAFrXjtGRjOS988=","visibility":"public","name":"Lex","_type":"UMLState","_id":"AAAAAAFrXjtwqzOpfoU="}
+{"_parent":"AAAAAAFrXjtGRjOS988=","visibility":"public","name":null,"_type":"UMLFinalState","_id":"AAAAAAFrXju6jTPPllU="}
+{"_parent":"AAAAAAFrXjtGRjOS988=","visibility":"public","name":"Parse","_type":"UMLState","_id":"AAAAAAFrXj5brDSMY1o="}
+{"_parent":"AAAAAAFrXjtGRjOS988=","visibility":"public","name":"Optimize","_type":"UMLState","_id":"AAAAAAFrXkCzGTUIiOQ="}
+{"_parent":"AAAAAAFrXjtGRjOS988=","visibility":"public","guard":null,"name":null,"_type":"UMLTransition","_id":"AAAAAAFrXj0ePzQ6NBA=","source":"AAAAAAFrXjtjdjOYbaE=","target":"AAAAAAFrXjtwqzOpfoU="}
+{"_parent":"AAAAAAFrXj0ePzQ6NBA=","expression":null,"visibility":"public","name":"feedLex","_type":"UMLEvent","_id":"AAAAAAFrXj10BTRMqDA=","value":null}
+{"_parent":"AAAAAAFrXjtGRjOS988=","visibility":"public","guard":null,"name":null,"_type":"UMLTransition","_id":"AAAAAAFrXj4UnjR1h3o=","source":"AAAAAAFrXjtwqzOpfoU=","target":"AAAAAAFrXju6jTPPllU="}
+{"_parent":"AAAAAAFrXj4UnjR1h3o=","expression":null,"visibility":"public","name":"lexFail","_type":"UMLEvent","_id":"AAAAAAFrXj4dJjSH2Do=","value":null}
+{"_parent":"AAAAAAFrXjtGRjOS988=","visibility":"public","guard":null,"name":null,"_type":"UMLTransition","_id":"AAAAAAFrXj+1eDTXIog=","source":"AAAAAAFrXjtwqzOpfoU=","target":"AAAAAAFrXj5brDSMY1o="}
+{"_parent":"AAAAAAFrXj+1eDTXIog=","expression":null,"visibility":"public","name":"feedParse","_type":"UMLEvent","_id":"AAAAAAFrXj\/G1TTpMJA=","value":null}
+{"_parent":"AAAAAAFrXjtGRjOS988=","visibility":"public","guard":null,"name":null,"_type":"UMLTransition","_id":"AAAAAAFrXkAB8DTt8dU=","source":"AAAAAAFrXj5brDSMY1o=","target":"AAAAAAFrXju6jTPPllU="}
+{"_parent":"AAAAAAFrXkAB8DTt8dU=","expression":null,"visibility":"public","name":"parseFail","_type":"UMLEvent","_id":"AAAAAAFrXkAHrDT\/Ojs=","value":null}
+{"_parent":"AAAAAAFrXjtGRjOS988=","visibility":"public","guard":null,"name":null,"_type":"UMLTransition","_id":"AAAAAAFrXkDeGTUvgV8=","source":"AAAAAAFrXj5brDSMY1o=","target":"AAAAAAFrXkCzGTUIiOQ="}
+{"_parent":"AAAAAAFrXkDeGTUvgV8=","expression":null,"visibility":"public","name":"feedOptimize","_type":"UMLEvent","_id":"AAAAAAFrXkDsnjVB0lQ=","value":null}
+{"_parent":"AAAAAAFrXjtGRjOS988=","visibility":"public","guard":null,"name":null,"_type":"UMLTransition","_id":"AAAAAAFrXkGVRDVKmDc=","source":"AAAAAAFrXkCzGTUIiOQ=","target":"AAAAAAFrXju6jTPPllU="}
+{"_parent":"AAAAAAFrXkGVRDVKmDc=","expression":null,"visibility":"public","name":"generate","_type":"UMLEvent","_id":"AAAAAAFrXkGh1TVctds=","value":null}
+END_OF_MODEL
+STATE_COUNT Parser
+SUBSEQUENT_STATE_COUNT Parser Lex
+TRANSITION_TRIGGER Parser Lex Parse
+
+
+Ok，state count of statemachine "Parser" is 5.
+Ok, subsequent state count from state "Lex" in statemachine "Parser" is 3.
+Ok, triggers of transition from state "Lex" to state "Parse" in statemachine "Parser" are (feedParse).

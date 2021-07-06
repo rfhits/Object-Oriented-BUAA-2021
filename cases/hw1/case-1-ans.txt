@@ -1,0 +1,121 @@
+Total class count is 6.
+Ok, operation count of class "top2" is 0.
+Ok, operation count of class "bottom1" is 5.
+Failed, duplicated class "middle2".
+Ok, operation count of class "top1" is 3.
+Ok, operation count of class "middle1" is 1.
+Ok, attribute count of class "top2" is 3.
+Ok, attribute count of class "bottom1" is 10.
+Failed, duplicated class "middle2".
+Ok, attribute count of class "top1" is 6.
+Ok, attribute count of class "middle1" is 9.
+Ok, associated classes of class "top2" are (middle1).
+Ok, associated classes of class "bottom1" are (bottom1, middle1, middle2, top1, top2).
+Failed, duplicated class "middle2".
+Ok, associated classes of class "top1" are (bottom1, middle1, top1).
+Ok, associated classes of class "middle1" are (bottom1, middle1, middle2, top1, top2).
+Ok, implement interfaces of class "top2" are (i1, i2, i3, i4, i5).
+Ok, implement interfaces of class "bottom1" are (i1, i10, i4, i5, i6, i7, i8, i9).
+Failed, duplicated class "middle2".
+Ok, implement interfaces of class "top1" are (i1, i4, i5).
+Ok, implement interfaces of class "middle1" are (i1, i4, i5).
+Ok, top base class of class "top2" is top2.
+Ok, top base class of class "bottom1" is top1.
+Failed, duplicated class "middle2".
+Ok, top base class of class "top1" is top1.
+Ok, top base class of class "middle1" is top1.
+Yes, information of class "top2" is hidden.
+No, attribute Attribute1 in bottom1, Attribute1 in middle1, Attribute2 in middle1, Attribute3 in middle1, Attribute1 in top1, Attribute3 in top1, Attribute4 in top1, Attribute5 in top1, Attribute6 in top1, are not hidden.
+Failed, duplicated class "middle2".
+No, attribute Attribute1 in top1, Attribute3 in top1, Attribute4 in top1, Attribute5 in top1, Attribute6 in top1, are not hidden.
+No, attribute Attribute1 in middle1, Attribute2 in middle1, Attribute3 in middle1, Attribute1 in top1, Attribute3 in top1, Attribute4 in top1, Attribute5 in top1, Attribute6 in top1, are not hidden.
+Ok, operation visibility of method "Operation3" in class "top2" is public: 0, protected: 0, private: 0, package-private: 0.
+Ok, operation visibility of method "Operation2" in class "top2" is public: 0, protected: 0, private: 0, package-private: 0.
+Ok, operation visibility of method "Operation1" in class "top2" is public: 0, protected: 0, private: 0, package-private: 0.
+Ok, operation visibility of method "Operation3" in class "bottom1" is public: 0, protected: 0, private: 0, package-private: 0.
+Ok, operation visibility of method "Operation2" in class "bottom1" is public: 0, protected: 0, private: 0, package-private: 0.
+Ok, operation visibility of method "Operation1" in class "bottom1" is public: 1, protected: 1, private: 2, package-private: 1.
+Failed, duplicated class "middle2".
+Failed, duplicated class "middle2".
+Failed, duplicated class "middle2".
+Ok, operation visibility of method "Operation3" in class "top1" is public: 1, protected: 0, private: 0, package-private: 0.
+Ok, operation visibility of method "Operation2" in class "top1" is public: 1, protected: 0, private: 0, package-private: 0.
+Ok, operation visibility of method "Operation1" in class "top1" is public: 1, protected: 0, private: 0, package-private: 0.
+Ok, operation visibility of method "Operation3" in class "middle1" is public: 0, protected: 0, private: 0, package-private: 0.
+Ok, operation visibility of method "Operation2" in class "middle1" is public: 0, protected: 0, private: 0, package-private: 0.
+Ok, operation visibility of method "Operation1" in class "middle1" is public: 1, protected: 0, private: 0, package-private: 0.
+Ok, method "Operation3" in class "top2" has parameter tables and return value: .
+Ok, method "Operation2" in class "top2" has parameter tables and return value: .
+Ok, method "Operation1" in class "top2" has parameter tables and return value: .
+Ok, method "Operation3" in class "bottom1" has parameter tables and return value: .
+Ok, method "Operation2" in class "bottom1" has parameter tables and return value: .
+Failed, duplicated method "Operation1" in class "bottom1".
+Failed, duplicated class "middle2".
+Failed, duplicated class "middle2".
+Failed, duplicated class "middle2".
+Ok, method "Operation3" in class "top1" has parameter tables and return value: (, no return).
+Ok, method "Operation2" in class "top1" has parameter tables and return value: (return: int).
+Failed, wrong type of parameters or return value in method "Operation1" of class "top1".
+Ok, method "Operation3" in class "middle1" has parameter tables and return value: .
+Ok, method "Operation2" in class "middle1" has parameter tables and return value: .
+Ok, method "Operation1" in class "middle1" has parameter tables and return value: (double, no return).
+Failed, attribute "Attribute6" not found in class "top2".
+Ok, attribute "Attribute1" in class "top2"'s visibility is private.
+Failed, attribute "Attribute4" not found in class "top2".
+Failed, attribute "Attribute5" not found in class "top2".
+Ok, attribute "Attribute3" in class "top2"'s visibility is private.
+Ok, attribute "Attribute2" in class "top2"'s visibility is private.
+Ok, attribute "Attribute6" in class "bottom1"'s visibility is package-private.
+Failed, duplicated attribute "Attribute1" in class "bottom1".
+Ok, attribute "Attribute4" in class "bottom1"'s visibility is public.
+Ok, attribute "Attribute5" in class "bottom1"'s visibility is protected.
+Failed, duplicated attribute "Attribute3" in class "bottom1".
+Failed, duplicated attribute "Attribute2" in class "bottom1".
+Failed, duplicated class "middle2".
+Failed, duplicated class "middle2".
+Failed, duplicated class "middle2".
+Failed, duplicated class "middle2".
+Failed, duplicated class "middle2".
+Failed, duplicated class "middle2".
+Ok, attribute "Attribute6" in class "top1"'s visibility is package-private.
+Ok, attribute "Attribute1" in class "top1"'s visibility is public.
+Ok, attribute "Attribute4" in class "top1"'s visibility is public.
+Ok, attribute "Attribute5" in class "top1"'s visibility is protected.
+Ok, attribute "Attribute3" in class "top1"'s visibility is public.
+Ok, attribute "Attribute2" in class "top1"'s visibility is private.
+Ok, attribute "Attribute6" in class "middle1"'s visibility is package-private.
+Failed, duplicated attribute "Attribute1" in class "middle1".
+Ok, attribute "Attribute4" in class "middle1"'s visibility is public.
+Ok, attribute "Attribute5" in class "middle1"'s visibility is protected.
+Failed, duplicated attribute "Attribute3" in class "middle1".
+Failed, duplicated attribute "Attribute2" in class "middle1".
+Failed, attribute "Attribute6" not found in class "top2".
+Failed, wrong type of attribute "Attribute1" in class "top2".
+Failed, attribute "Attribute4" not found in class "top2".
+Failed, attribute "Attribute5" not found in class "top2".
+Failed, wrong type of attribute "Attribute3" in class "top2".
+Failed, wrong type of attribute "Attribute2" in class "top2".
+Failed, wrong type of attribute "Attribute6" in class "bottom1".
+Failed, duplicated attribute "Attribute1" in class "bottom1".
+Failed, wrong type of attribute "Attribute4" in class "bottom1".
+Failed, wrong type of attribute "Attribute5" in class "bottom1".
+Failed, duplicated attribute "Attribute3" in class "bottom1".
+Failed, duplicated attribute "Attribute2" in class "bottom1".
+Failed, duplicated class "middle2".
+Failed, duplicated class "middle2".
+Failed, duplicated class "middle2".
+Failed, duplicated class "middle2".
+Failed, duplicated class "middle2".
+Failed, duplicated class "middle2".
+Failed, wrong type of attribute "Attribute6" in class "top1".
+Failed, wrong type of attribute "Attribute1" in class "top1".
+Failed, wrong type of attribute "Attribute4" in class "top1".
+Failed, wrong type of attribute "Attribute5" in class "top1".
+Failed, wrong type of attribute "Attribute3" in class "top1".
+Failed, wrong type of attribute "Attribute2" in class "top1".
+Failed, wrong type of attribute "Attribute6" in class "middle1".
+Failed, duplicated attribute "Attribute1" in class "middle1".
+Failed, wrong type of attribute "Attribute4" in class "middle1".
+Failed, wrong type of attribute "Attribute5" in class "middle1".
+Failed, duplicated attribute "Attribute3" in class "middle1".
+Failed, duplicated attribute "Attribute2" in class "middle1".
